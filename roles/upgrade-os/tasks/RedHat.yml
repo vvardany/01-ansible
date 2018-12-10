@@ -3,6 +3,6 @@
       name: "mc"
       state: latest
       #update_only: "yes"
-      async: 600
-      poll: 5
+    async: 600
+    poll: 5
     register: update_result
