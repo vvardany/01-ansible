@@ -13,8 +13,8 @@
       - fail: msg="httpd is not stopped"
         when: ("inactive" not in result_status.stdout)
 
-    become: yes
-    become_user: ansible
+#    become: yes
+#    become_user: ansible
     tags: stopping
 
 
@@ -31,6 +31,6 @@
           delay: 3
           timeout: 300
 
-    become: yes
-    become_user: ansible
+#    become: yes
+#    become_user: ansible
     tags: starting
