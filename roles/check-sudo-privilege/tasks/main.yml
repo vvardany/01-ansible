@@ -8,4 +8,4 @@
     become: yes
 
   - fail: msg="Sudo privilege is missing!"
-    when: ("(root) ALL" not in result_sudo.stdout)
+    when: ("ALL" not in result_sudo.stdout)
