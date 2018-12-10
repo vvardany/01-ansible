@@ -2,5 +2,5 @@
     yum:
       name: "mc"
       state: latest
-      update_only: "yes"
+      #update_only: "yes"
     register: update_result
