@@ -1,0 +1,6 @@
+- hosts: all
+  roles:
+     - check-sudo-privilege
+     - upgrade-os
+  register: upgrade_result
+     - { role: reboot, when: 'update_result is changed' }

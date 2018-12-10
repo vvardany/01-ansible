@@ -1,0 +1,11 @@
+---
+  - name: Check sudo privilege
+    command: sudo -l -U "{{ ansible_user_id }}"
+    args:
+      warn: false
+    register: result_sudo
+    changed_when: false
+    become: yes
+
+  - fail: msg="Sudo privilege is missing!"
+    when: ("(root) ALL" not in result_sudo.stdout)
