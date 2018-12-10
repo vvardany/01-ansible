@@ -1,7 +1,8 @@
   - name: "Installing updates using yum"
     yum:
       name: "mc"
-      state: latest
+      state: absent
+      #state: latest
       #update_only: "yes"
     async: 600
     poll: 5
