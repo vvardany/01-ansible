@@ -8,7 +8,7 @@
       - name: Verify httpd state after stopping
         command: systemctl status httpd
 #        register: result_status
-        changed_when: false
+#        changed_when: false
 
 #      - fail: msg="httpd is not stopped"
 #        when: ("inactive" not in result_status.stdout)
