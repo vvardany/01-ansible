@@ -4,7 +4,7 @@
   #    state: absent
   #    #state: latest
   #    #update_only: "yes"
-    command: "/bin/sleep 30; echo HELOOOOO-VARDAN"
+    shell: "/bin/sleep 30; echo HELOOOOO-VARDAN"
     async: 600
     poll: 5
     register: update_result
