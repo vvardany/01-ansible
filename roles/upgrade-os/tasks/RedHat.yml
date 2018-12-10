@@ -1,6 +1,6 @@
   - name: "Installing updates using yum"
     yum:
-      name: "*"
+      name: "mc"
       state: latest
       update_only: "yes"
     register: update_result

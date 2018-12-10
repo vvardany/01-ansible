@@ -13,4 +13,3 @@
 
   - name: "Check server uptime"
     shell: "uptime -p"
-    register: uptime
