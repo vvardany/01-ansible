@@ -7,11 +7,11 @@
 
       - name: Verify httpd state after stopping
         command: systemctl status httpd
-        register: result_status
+#        register: result_status
         changed_when: false
 
-      - fail: msg="httpd is not stopped"
-        when: ("inactive" not in result_status.stdout)
+#      - fail: msg="httpd is not stopped"
+#        when: ("inactive" not in result_status.stdout)
 
 #    become: yes
 #    become_user: ansible
