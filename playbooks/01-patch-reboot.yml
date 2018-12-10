@@ -2,5 +2,6 @@
   roles:
      - check-sudo-privilege
      - upgrade-os
-     - { role: reboot, when: update_result is changed }
+#     - { role: reboot, when: update_result is changed }
+     - reboot
   become: yes
