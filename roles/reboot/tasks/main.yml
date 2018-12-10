@@ -10,3 +10,7 @@
       sleep: 5
       delay: 5
       timeout: 300
+
+  - name: "Check server uptime"
+    shell: "uptime -p"
+    register: uptime

@@ -2,6 +2,5 @@
   roles:
      - check-sudo-privilege
      - upgrade-os
-     #- { role: reboot, when: 'upgrade_state == "channged"' }
      - { role: reboot, when: update_result is changed }
   become: yes
