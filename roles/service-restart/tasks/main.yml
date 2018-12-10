@@ -2,8 +2,8 @@
   - block:
       - name: Stopping httpd
         service:
-        name: httpd
-        state: stopped
+          name: httpd
+          state: stopped
 
       - name: Verify httpd state after stopping
         command: systemctl status httpd
@@ -21,8 +21,8 @@
   - block:
       - name: Startng httpd
         service:
-        name: httpd
-        state: started
+          name: httpd
+          state: started
 
       - name: Make sure HTTP is running
         wait_for:
