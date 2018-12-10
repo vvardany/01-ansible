@@ -1,7 +1,8 @@
 - hosts: all
   roles:
      - check-sudo-privilege
+     - { role: service-restart, tags: stopping }
      - upgrade-os
-#     - { role: reboot, when: update_result is changed }
-     - reboot
+     - { role: reboot, when: update_result is changed }
+     - { role: service-restart, tags: starting }
   become: yes
