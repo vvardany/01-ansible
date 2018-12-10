@@ -2,13 +2,14 @@
     yum:
       name: '*'
       state: latest
-      update_cache: yes
+      update_only: "yes"
+      #update_cache: yes
     async: 1000
     poll: 0
-    register: update_sleeper
+    register: update_result
 
   - name: YUM - Check for update status
-    async_status: jid={{ update_sleeper.ansible_job_id }}
+    async_status: jid={{ update_result.ansible_job_id }}
     register: job_result
     until: job_result.finished
     retries: 100
