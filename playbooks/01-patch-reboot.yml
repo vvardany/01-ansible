@@ -2,4 +2,4 @@
   roles:
      - check-sudo-privilege
      - upgrade-os
-     - { role: reboot, when: 'upgrade_state == 'changed'' }
+     - { role: reboot, when: 'upgrade_state == "changed"' }
