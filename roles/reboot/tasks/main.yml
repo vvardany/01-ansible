@@ -13,3 +13,8 @@
 
   - name: "Check server uptime"
     shell: "uptime -p"
+    register: uptime
+
+  - name: "Print server uptime"
+    debug:
+      msg: "{{ uptime.stdout }}"
