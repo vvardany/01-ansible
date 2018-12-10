@@ -1,8 +1,8 @@
 ---
-- import_tasks: RedHat.yml
-  when: ansible_os_family == 'RedHat'
+  - import_tasks: RedHat.yml
+    when: ansible_os_family == 'RedHat'
 
-- name:
-  set_fact:
-      upgrade_state: "changed"
-  when: update_sleeper is changed
+  - name: Set fact for Upgrade state
+    set_fact:
+        upgrade_state: "changed"
+    when: update_sleeper is changed
