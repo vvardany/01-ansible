@@ -1,0 +1,14 @@
+---
+  - name: Stopping httpd
+    service:
+      name: httpd
+      state: stopped
+
+#      - name: Verify httpd state after stopping
+#        command: systemctl status httpd
+#        ignore_errors: yes
+#        changed_when: false
+#        register: result_status
+
+#      - fail: msg="httpd is not stopped"
+#        when: ("inactive" not in result_status.stdout)
