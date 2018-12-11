@@ -9,6 +9,8 @@
     #ignore_errors: yes
     changed_when: false
     register: result_status
+    retries: 5
+    until: result_status.rc == 3
     failed_when: result_status.rc == 0
 
 
