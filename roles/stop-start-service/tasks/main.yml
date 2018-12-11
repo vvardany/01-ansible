@@ -1,3 +1,2 @@
 ---
-- include_tasks: '{{ stop }}.yml'
-- include_tasks: '{{ start }}.yml'
+- include_tasks: '{{ action }}.yml'
