@@ -9,7 +9,7 @@
     #ignore_errors: yes
     changed_when: false
     register: result_status
-    failed_when: result_status.rc == 3
+    failed_when: result_status.rc == 0
 
 
 #  - fail: msg="httpd is not stopped"
