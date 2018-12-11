@@ -6,7 +6,7 @@
 
   - name: Verify httpd state after stopping
     command: systemctl status httpd
-    ignore_errors: yes
+    #ignore_errors: yes
     changed_when: false
     register: result_status
     failed_when: result_status.rc == 3
